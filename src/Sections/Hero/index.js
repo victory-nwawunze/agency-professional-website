@@ -10,7 +10,7 @@ import Arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
 const move = keyframes`
-
+0%{transform:translateY(-5x);}
 `;
 const Herosection = styled.div`
   color: var(--white);
