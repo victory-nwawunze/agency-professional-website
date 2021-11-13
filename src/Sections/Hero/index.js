@@ -10,7 +10,9 @@ import Arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
 const move = keyframes`
-0%{transform:translateY(-5x);}
+0% {transform:translateY(-5px);}
+50% {transform:translateY(10px);}
+100% {transform:translateY(-5px);}
 `;
 const Herosection = styled.div`
   color: var(--white);
@@ -83,6 +85,7 @@ const MobileSvg = styled.img`
   width: calc(30% + 28vw);
   z-index: 7;
   height: auto;
+  animation: ${move} 2.5s ease infinite;
 `;
 const LeftBlock = styled.div`
   display: flex;
