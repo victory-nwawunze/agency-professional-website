@@ -3,9 +3,15 @@
 // This is About component, It will contain about us info.
 import wave from "../../assets/waves.svg";
 import hand from "../../assets/hand.svg";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import rocket from "../../assets/rocket image.png";
 import human from "../../assets/human.svg";
+
+const move = keyframes`
+0%{transform:translateY(-5px)}
+50%{transform:translateY(10%) translateX(10px)}
+100%{transform:translateY(-5px)}
+`;
 const AboutSection = styled.div`
   width: 100vw;
   position: relative;
@@ -23,6 +29,9 @@ const Hands = styled.div`
   position: absolute;
   bottom: -1rem;
   right: 0;
+  @media only Screen and (max-width: 40em) {
+    display: none;
+  }
 `;
 const Main = styled.div`
   margin: 0 15rem;
@@ -30,6 +39,11 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only Screen and (max-width: 40em) {
+    align-items: center;
+    margin: 3rem calc(5rem + 5vw);
+  }
 `;
 const Title = styled.h1`
   display: inline-block;
@@ -46,6 +60,10 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only Screen and (max-width: 40em) {
+    flex-direction: column;
+  }
 `;
 const Rocket = styled.div`
   display: flex;
@@ -53,23 +71,43 @@ const Rocket = styled.div`
   align-items: center;
   width: 40%;
   padding:bottom:5rem;
+  animation:${move} 2.5s ease infinite;
+
+   @media only Screen and (max-width: 40em){
+     width:50vw;
+     padding-bottom:0;
+   }
 `;
 const AboutText = styled.div`
   position: relative;
   width: 50%;
+  @media only Screen and (max-width: 40em) {
+    width: 100%;
+  }
 `;
 const Human = styled.div`
   width: 50%;
   position: absolute;
   right: 0;
   bottom: 100%;
+  @media only Screen and (max-width: 40em) {
+    display: none;
+  }
 `;
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
 `;
-const Circle = styled.span``;
+const Circle = styled.span`
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--black);
+  margin-right: 0.5rem;
+  margin-to: 1rem;
+`;
 const About = () => {
   return (
     <AboutSection>
@@ -97,9 +135,9 @@ const About = () => {
               value.
             </Text>
             <div>
-              <Circle />
-              <Circle />
-              <Circle />
+              <Circle style={{ backgroundColor: "var(--purple)" }} />
+              <Circle style={{ backgroundColor: "var(--pink)" }} />
+              <Circle style={{ backgroundColor: "var(--black)" }} />
             </div>
           </AboutText>
         </Content>
