@@ -22,11 +22,23 @@ const Herosection = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media only Screen and (max-width: 48em) {
+    height: 70vw;
+    display: block;
+  }
+  @media only Screen and (max-width: 420px) {
+    height: auto;
+    padding-bottom: 2rem;
+  }
 `;
 const Blobs = styled.div`
   width: 100%;
   position: absolute;
   right: 0;
+  @media only Screen and (max-width: 48em) {
+    opacity: 0.5;
+  }
 `;
 const PinkBlob = styled.div`
   width: calc(15% + 15vw);
@@ -52,6 +64,13 @@ const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 70vw;
+  justify-content: center;
+  align-items: center;
+
+  @media only Screen and (max-width: 48em) {
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 const Topic = styled.div`
   display: flex;
@@ -86,6 +105,16 @@ const MobileSvg = styled.img`
   z-index: 7;
   height: auto;
   animation: ${move} 2.5s ease infinite;
+
+  @media only Screen and (max-width: 48em) {
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.5;
+  }
+  @media only Screen and (max-width: 40em) {
+    display: none;
+  }
 `;
 const LeftBlock = styled.div`
   display: flex;
@@ -93,6 +122,15 @@ const LeftBlock = styled.div`
   align-items: flex-start;
   width: 50%;
   line-height: 1.5;
+
+  @media only Screen and (max-width: 48em) {
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: calc(2.5rem + 2.5vw);
+    filter: drop-shadow(2px 4px 6px var(--black));
+  }
 `;
 const CTA = styled.button`
   padding: 0.5rem 1rem;
