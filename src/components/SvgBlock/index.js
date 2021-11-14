@@ -1,3 +1,5 @@
+/** @format */
+
 // This is SvgBlock component, It will render svgs like in the services section.
 
 const SvgBlock = () => {
