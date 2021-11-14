@@ -64,7 +64,11 @@ const Human = styled.div`
   right: 0;
   bottom: 100%;
 `;
-const Text = styled.h4``;
+const Text = styled.h4`
+  font-size: calc(0.5rem + 1vw);
+  line-height: 1.5;
+  color: var(--nav2);
+`;
 const Circle = styled.span``;
 const About = () => {
   return (
