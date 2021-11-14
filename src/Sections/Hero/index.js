@@ -106,12 +106,14 @@ const CTA = styled.button`
   align-items: center;
   transition: all 0.2s;
 
-  &:active {
-    transform: scale(0.9);
-  }
   &:hover {
     transform: scale(1.1);
   }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
   img {
     width: 1.5rem;
   }
