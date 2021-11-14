@@ -1,3 +1,5 @@
+/** @format */
+
 // This is TextBlock component, To render text with same format
 
 const TextBlock = () => {
